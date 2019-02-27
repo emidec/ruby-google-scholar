@@ -32,7 +32,7 @@ describe Google::Scholar::ArticleSummary do
   end
   describe ".full_article_url" do
     it "should return the url for the full article" do
-      subject.full_article_url.should == 'http://scholar.google.com/citations?view_op=view_citation&hl=en&user=M7uPknsAAAAJ&pagesize=100&citation_for_view=M7uPknsAAAAJ:kNdYIx-mwKoC'
+      subject.full_article_url.should == 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=M7uPknsAAAAJ&pagesize=100&citation_for_view=M7uPknsAAAAJ:kNdYIx-mwKoC'
     end
   end
 end

@@ -16,7 +16,7 @@ module Google
       "scholar.google.com"
     end
     def self.http_scheme
-      "http://"
+      "https://"
     end
     def self.google_url
       "#{self.http_scheme}#{self.google_root}"

@@ -7,13 +7,13 @@ describe Google::Scholar::Scraper do
     end
     it "should validate an http url" do
       expect{Google::Scholar::Scraper.new("bla@bla.org")}.to raise_error
-      expect{Google::Scholar::Scraper.new("http://scholar.google.com")}.not_to raise_error
+      expect{Google::Scholar::Scraper.new("https://scholar.google.com")}.not_to raise_error
       expect{Google::Scholar::Scraper.new("ftp://scholar.google.com")}.to raise_error
     end
     it "should load up a nokogiri document" do
       Nokogiri::HTML::Document.should_receive(:parse)
-      Google::Scholar::Scraper.should_receive(:open).with("http://scholar.google.com")
-      Google::Scholar::Scraper.new("http://scholar.google.com")
+      Google::Scholar::Scraper.should_receive(:open).with("https://scholar.google.com")
+      Google::Scholar::Scraper.new("https://scholar.google.com")
     end
   end
   describe ".valid?" do
